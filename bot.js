@@ -73,7 +73,7 @@ var prefix = "/"
   let args = message.content.split(" ").slice(1);
 
 if (command == "stream") {
-l7n.user.setGame(`${args}` , `https://twitch.tv/ichbinxirdx`)
+l7n.user.setGame(args.join("  "), `https://twitch.tv/ichbinxirdx`)
     message.author.send("** Done President ! **")
     message.delete();
   }
