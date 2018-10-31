@@ -63,6 +63,28 @@ const l7n = new Discord.Client();
 l7n.on('ready' , message => {
 l7n.user.setGame('.#Weeeeeelcome To L7n 🎶' , "https://twitch.tv/ichbinxirdx")
 });
+
+
+l7n.on('message', message => {
+var prefix = "L"
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+if (command == "stream") {
+client.user.setGame(`${args}` , `https://twitch.tv/ichbinxirdx`)
+    message.delete();
+  }
+
+
+
+});
+
+
 l7n.login(process.env.BOT_TOKENl7n);
 const edward = new Discord.Client();
 
