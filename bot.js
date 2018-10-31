@@ -66,7 +66,7 @@ l7n.user.setGame('.#Weeeeeelcome To L7n 🎶' , "https://twitch.tv/ichbinxirdx")
 
 
 l7n.on('message', message => {
-var prefix = "L"
+var prefix = "/"
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -77,6 +77,7 @@ var prefix = "L"
 
 if (command == "stream") {
 client.user.setGame(`${args}` , `https://twitch.tv/ichbinxirdx`)
+    message.channel.send("done")
     message.delete();
   }
 
