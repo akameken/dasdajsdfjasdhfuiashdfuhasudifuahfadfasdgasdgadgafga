@@ -60,9 +60,6 @@ message.channel.send(args.join("  "))
 
 client.login(process.env.BOT_TOKEN1);
 const l7n = new Discord.Client();
-l7n.on('ready' , message => {
-l7n.user.setGame('.#Weeeeeelcome To L7n 🎶' , "https://twitch.tv/ichbinxirdx")
-});
 
 
 l7n.on('message', message => {
