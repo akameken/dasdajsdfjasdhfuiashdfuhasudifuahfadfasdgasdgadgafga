@@ -59,6 +59,11 @@ message.channel.send(args.join("  "))
 
 
 client.login(process.env.BOT_TOKEN1);
+const l7n = new Discord.Client();
+client.on('ready' , message => {
+client.user.setGame('.#Weeeeeelcome To L7n :notes:' , "https://twitch.tv/ichbinxirdx")
+});
+l7n.login(process.env.BOT_TOKENl7n);
 const edward = new Discord.Client();
 
 edward.on('message', message => {
